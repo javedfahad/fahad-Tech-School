@@ -1,0 +1,25 @@
+<template>
+    <div> 
+        <div>Name: {name} </div>
+        <div>Company: {compony}</div>
+        <div>Designation: {designation}</div>
+        <div>Salary: {salary} </div>
+    </div>
+
+    <div style="border: 1px solid black; height: 600px; width: 100%;">
+        <div>
+            <img src={welcomeImage} alt="welcome">
+        </div>
+        <div style="text-align: center;"> 
+            <h1 style="font-size: 40px;">Welcome To SSS</h1>
+        </div>
+        <div>
+            <img src={schoolImageLogo} alt="SSS">
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <lightning-button label="Start Flow" onclick={handleFlowStart}></lightning-button>
+        </div>
+    </div>
+
+    <lightning-flow></lightning-flow>
+</template>
