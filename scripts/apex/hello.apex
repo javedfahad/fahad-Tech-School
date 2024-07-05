@@ -1,1 +1,1 @@
-Setcheck.Setcheck();
+SOQLDemo.SOQLDemo();

@@ -11,7 +11,7 @@ public with sharing class Setcheck {
        inset2.add(30);
        inset2.add(40);
        inset2.add(50);
-
+ 
        System.debug('remove the '+inset2.remove(30));
        System.debug('insert2 '+inset2);
 
@@ -30,5 +30,17 @@ public with sharing class Setcheck {
 
     //    System.debug('Set name is '+inset1);
        
+    }
+
+    public static void demoSObject(){
+        set <Id> accIds = new Set <Id>();
+        List<Account> accList = new List <Account>();
+        accList = [SELECT Id, Name FROM Account LIMIT 5];
+
+        for(Account acc : accList){
+            accIds.add(acc.Id);
+        }
+
+        System.debug('set Contains = '+ accIds);
     }
 }
