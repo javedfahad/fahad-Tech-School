@@ -96,6 +96,7 @@ public with sharing class ApexScenariosdemo {
         appList = [SELECT Id, Name, Guardian_City__c FROM Application__c LIMIT 15];
         for (Application__c app : appList) {
             System.debug(app.name+ '  the City  ' + app.Guardian_City__c);
+            
         }
     }
 
