@@ -1,6 +1,5 @@
 import { LightningElement } from 'lwc';
 import welcomeImage from '@salesforce/resourceUrl/welcomeImage';
-import SchoolImagelogo from '@salesforce/resourceUrl/SchoolImagelogo';
 
 export default class Demolwc extends LightningElement {
     name = 'Fahad';
@@ -8,7 +7,6 @@ export default class Demolwc extends LightningElement {
     designation = 'Developer';
     salary = '$10000';
     welcomeImage = welcomeImage;
-    schoolImageLogo = SchoolImagelogo;
 
     handleFlowStart() {
         const flow = this.template.querySelector('lightning-flow');
