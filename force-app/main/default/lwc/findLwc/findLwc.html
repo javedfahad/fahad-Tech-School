@@ -1,0 +1,23 @@
+<template>
+    <div class="slds-m-around_medium">
+        <h1 class="slds-text-heading_small">Search Account Info to just enter the number</h1>
+    </div>
+    <div onkeyup={handleKeyUp}>
+        <lightning-input
+            name="enter-search"
+            label="Search when user hits the 'enter' key"
+            type="search"
+        ></lightning-input>
+        
+    </div>
+
+    <div style ="text-align: center;margin-top: 11px;">
+        <!-- Brand variant: Identifies the primary action in a group of buttons -->
+   <lightning-button variant="brand" label="Search" title="Primary action" onclick={handleClick} class="slds-m-left_x-small">
+
+   </lightning-button>
+   </div>
+    <p if:true={queryTerm}>
+        Searched for {queryTerm}!
+    </p>
+</template>
