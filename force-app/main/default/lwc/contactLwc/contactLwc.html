@@ -1,5 +1,19 @@
-<!-- contactList.html -->
+<!-- Apex Imperative Method html -->
 <template>
+    <lightning-card title="Apex Imperative Method" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+           <p class="slds-m-bottom_small">
+            <lightning-button label="Loads Contacts" onclick={handleloadd}></lightning-button>
+           </p> 
+           <template lwc:if={contacts}>
+            <template for:each={contacts} for:item="contact">
+                <p key = {contact.Id}>{contact.Name}</p>
+            </template>
+           </template>
+        </div>
+    </lightning-card>
+</template>
+<!-- <template>
     <lightning-card title="All Contacts" icon-name="standard:contact">
         <template if:true={contacts}>
             <lightning-datatable
@@ -13,4 +27,4 @@
             <p class="slds-text-color_error">Error: {error}</p>
         </template>
     </lightning-card>
-</template>
+</template> -->

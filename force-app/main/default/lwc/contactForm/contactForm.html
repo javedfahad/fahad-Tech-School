@@ -1,0 +1,41 @@
+<template>
+    <lightning-card title="Create New Contact">
+        <!-- Record Type Selection -->
+        <lightning-radio-group
+            label="Select Contact Type"
+            options={recordTypeOptions}
+            value={selectedRecordType}
+            onchange={handleRecordTypeChange}>
+        </lightning-radio-group>
+
+        <!-- Form Fields -->
+        <lightning-input 
+            label="Name"
+            value={name}
+            onchange={handleNameChange}>
+        </lightning-input>
+
+        <lightning-input 
+            label="Email"
+            type="email"
+            value={email}
+            onchange={handleEmailChange}>
+        </lightning-input>
+
+        <lightning-input 
+            label="Phone Number"
+            type="tel"
+            value={phoneNumber}
+            onchange={handlePhoneNumberChange}>
+        </lightning-input>
+
+        <lightning-input 
+            label="Address"
+            value={address}
+            onchange={handleAddressChange}>
+        </lightning-input>
+
+        <!-- Submit Button -->
+        <lightning-button label="Submit" onclick={handleSubmit} variant="brand"></lightning-button>
+    </lightning-card>
+</template>
